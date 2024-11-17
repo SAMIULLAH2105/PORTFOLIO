@@ -1,0 +1,40 @@
+{
+  "hash": "4d7ed9e7",
+  "configHash": "ef31cbcf",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "f21c6e8c",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "d278fde1",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "08ee06f2",
+      "needsInterop": true
+    },
+    "sweetalert2": {
+      "src": "../../node_modules/sweetalert2/dist/sweetalert2.esm.all.js",
+      "file": "sweetalert2.js",
+      "fileHash": "d0ead31f",
+      "needsInterop": false
+    },
+    "typewriter-effect": {
+      "src": "../../node_modules/typewriter-effect/dist/react.js",
+      "file": "typewriter-effect.js",
+      "fileHash": "44b70e2a",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-JCJMHKMF": {
+      "file": "chunk-JCJMHKMF.js"
+    },
+    "chunk-BUSYA2B4": {
+      "file": "chunk-BUSYA2B4.js"
+    }
+  }
+}

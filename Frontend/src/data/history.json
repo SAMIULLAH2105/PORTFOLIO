@@ -1,0 +1,22 @@
+[
+  {
+    "role": "MERN Stack Intern",
+    "organisation": "NCL - NED University",
+    "startDate": "Sept, 2024",
+    "endDate": "Nov, 2024",
+    "experiences": [
+      "Designed and developed a Truck Renting Website from scratch using the MERN stack.",
+      "Collaboratively created a dynamic dashboard for managing device data, featuring advanced search and filtering functionalities."
+    ],
+    "imageSrc": "history/ncl.png"
+  },
+  {
+    "role": "Web Developer Intern",
+    "organisation": "CodSoft",
+    "startDate": "Aug, 2023",
+    "endDate": "Oct, 2023",
+    "experiences": ["Worked on Responsiveness of website", "Collaboratively built a dynamic E-Commerce website."],
+    "imageSrc": "history/codsoft.png"
+  }
+
+]

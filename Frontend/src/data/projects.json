@@ -1,0 +1,43 @@
+[
+  {
+    "title": "E-Commerce Website",
+    "imageSrc": "projects/project6.png",
+    "description": "Immersive social platform utilizing React, exploring advanced concepts for deeper learning.",
+    "skills": ["Javascript", "React","Bootstrap"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Social Media Website",
+    "imageSrc": "projects/project1.png",
+    "description": "Immersive social platform utilizing React, exploring advanced concepts for deeper learning.",
+    "skills": ["Javascript", "React","Bootstrap"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Portfolio Website",
+    "imageSrc": "projects/project2.png",
+    "description": "A dynamic portfolio site in React, showcasing skills and projects with engaging, interactive features.",
+    "skills": ["Javascript", "React"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "PHP Signup/Login Page",
+    "imageSrc": "projects/project3.png",
+    "description": "Secure Signup/Login Page with SQL and PHP, mastering backend development essentials.",
+    "skills": ["Javascript", "PHP", "MySql"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  }
+  ,
+  {
+    "title": "Hospital Management System",
+    "imageSrc": "projects/project4.png",
+    "description": "QuickSlot an intuitive platform for scheduling medical appointments, including in-person visits, online consultations, and lab tests. It will also provide essential health guidelines on the dashboard.",
+    "skills": ["PHP", "MySql","Javascript"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  }
+]
