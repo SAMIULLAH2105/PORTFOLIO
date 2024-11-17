@@ -9,6 +9,17 @@ const PORT = 8080;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+app.use(cors(
+  {
+    origin:[""],
+    methods:["POST","GET"],
+    credentials:true
+  }
+));
+
+app.get("/",(req,res)=>{
+  res.json("Hello");
+})
 
 // POST route to send email
 app.post("/send-email", async (req, res) => {
