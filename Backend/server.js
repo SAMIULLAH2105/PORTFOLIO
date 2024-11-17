@@ -1,50 +1,40 @@
-import express from "express";
 import nodemailer from "nodemailer";
-import bodyParser from "body-parser";
-import cors from "cors";
 
-const app = express();
-const PORT = 8080;
+// Vercel handles requests through serverless functions, so we use this format
+export default async function handler(req, res) {
+  if (req.method === "POST") {
+    const { name, email, message } = req.body;
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
+    // Configure Nodemailer
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.SMTP_USER, // Use environment variable for email user
+        pass: process.env.SMTP_PASS, // Use environment variable for email password
+      },
+    });
 
-// POST route to send email
-app.post("/send-email", async (req, res) => {
-  const { name, email, message } = req.body;
+    // Email options
+    const mailOptions = {
+      from: email,
+      to: "samiullah.codes@gmail.com",
+      subject: `New Contact Form Submission from ${name}`,
+      text: `You have a new message from your contact form:
+      
+      Name: ${name}
+      Email: ${email}
+      Message: ${message}`,
+    };
 
-  // Configure Nodemailer
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "samiullah21january@gmail.com", // Replace with your Gmail address
-      pass: "bsnz wmqx tybr fhyb", // Replace with your Gmail App Password
-    },
-  });
-
-  // Email options
-  const mailOptions = {
-    from: email,
-    to: "samiullah.codes@gmail.com",
-    subject: `New Contact Form Submission from ${name}`,
-    text: `You have a new message from your contact form:
-    
-    Name: ${name}
-    Email: ${email}
-    Message: ${message}`,
-  };
-
-  try {
-    await transporter.sendMail(mailOptions);
-    res.status(200).send("Email sent successfully!");
-  } catch (error) {
-    console.error("Error sending email:", error);
-    res.status(500).send("Error sending email");
+    try {
+      await transporter.sendMail(mailOptions);
+      res.status(200).send("Email sent successfully!");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      res.status(500).send("Error sending email");
+    }
+  } else {
+    // Handle non-POST requests
+    res.status(405).send("Method Not Allowed");
   }
-});
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+}
